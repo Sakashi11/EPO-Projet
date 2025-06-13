@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecole Polytechnique de Ouagadougou</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #036600;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .logo-container h1 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-left: 25px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1581092795360-5c4f2c26056f') no-repeat center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .description {
+      display: none;
+      padding: 50px 40px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .description p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 10px auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #0c6600;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h2 {
+        font-size: 32px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="EPO/logo.jpg" alt="Logo de l'école" />
+      <h1>Ecole Polytechniquede Ouagadougou</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a id="lienAccueil">Accueil</a></li>
+        <li><a href="Académique.html">Académique</a></li>
+        <li><a href="Admission.html">Admission</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="EPO/Accueil.jpg" eight="800" width="500">
+  </section>
+
+  <!-- Description masquée -->
+  <section id="description" class="description">
+    <h3>Bienvenue à l'Ecole Polytechnique de Ouagadougou</h3>
+    <p>
+      L'ecole Polytechnique de Ouagadougou a été créé le 30 novembre 2017. 
+      Elle est spécialisée dans la formation d’ingénieurs et de cadres dans les domaines des sciences, de la technologie et du management
+    </p>
+    <p>
+      Grâce à un corps professoral qualifié, des programmes innovants et une forte orientation vers la pratique, l’EPO forme des professionnels compétents, engagés dans le développement durable et l’innovation au service de la Nation
+    </p>
+  
+  </section>
+
+  <footer>
+    &copy; 2025 EPO – Tous droits réservés.
+    <br>GUIGMA Rodrigue Innocent && OUATTARA Awa Aida
+  </footer>
+
+  <!-- Script pour afficher la description au clic -->
+  <script>
+    document.getElementById("lienAccueil").addEventListener("click", function () {
+      const desc = document.getElementById("description");
+      desc.style.display = "block";
+      desc.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
+
